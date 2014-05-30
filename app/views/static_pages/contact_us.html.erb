@@ -1,0 +1,49 @@
+<%= form_for(@contact_message) do |f| %>
+  <% if @contact_message.errors.any? %>
+      <h2><%= pluralize(@contact_message.errors.count, "error") %> prohibited this contact_message from being saved:</h2>
+
+      <ul>
+      <% @contact_message.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+  <% end %>
+	<div class="large-5 columns">
+		<h3>Contact Us</h3>
+		<p>We love to answer questions. Please, ask us anything. If you prefer, you can reach out to us in the 
+			usual fashion at the contact coordinates listed below:</p>
+		<ul class="vcard">
+		  <li class="fn">Lighthouse Commercial Mortgage</li>
+		  <li class="street-address">3380 Tremont Road</li>
+		  <li class="locality">Suite 220</li>
+		  <li><span class="state">Columbus, OH</span> <span class="zip">43221</span></li>
+			<li class="street-address">Phone: 614-481-6074</li>
+			<li class="street-address">Toll Free: 888-474-2603</li>
+		</ul>
+	</div>
+	<div class="large-7 columns">
+		<h3 class="subheader">Your Message</h3>
+		<%= f.text_field :email, class: " ", placeholder: 'Please Enter your Email Address' %>
+    <%= f.text_area :content, class: " ", rows: "8", placeholder: 'Enter your question or comment here' %>
+		
+    <%= f.submit "Send Message", class: "button" %>
+	</div>
+<% end %>
+</div>
+<div class="row">
+	<div class="large-5 columns">
+		<ul class="vcard">
+			<li class="fn">Vernon Morrison</li>
+			<li class="street-address">Phone: 614-481-6075</li>
+			<li class="street-address">Fax: 614-448-3113</li>
+			<li class="email"><a href="mailto:vernon_morrison@lighthouse-commercial.com">Email</a></li>
+		</ul>		
+	</div>
+	<div class="large-7 columns">
+		<ul class="vcard">
+			<li class="fn">Mike Anderson</li>
+			<li class="street-address">Phone: 614-340-3972</li>
+			<li class="street-address">Fax: 614-448-3113</li>
+			<li class="email"><a href="mailto:manderson@lighthouse-commercial.com">Email</a></li>
+		</ul>
+	</div>

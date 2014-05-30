@@ -1,0 +1,8 @@
+
+	<div class="large-8 large-centered columns">
+		<h2>Don't take our word for it</h2>
+		<h3 class="subheader">Listen to what our customers have to say about us</h3>
+		<% @testimonials.each do |testimonial| %>
+			<blockquote><%= testimonial.content %><cite><%= testimonial.source %></cite></blockquote>
+		<% end %>
+	</div>

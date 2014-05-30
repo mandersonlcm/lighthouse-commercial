@@ -1,0 +1,37 @@
+<%= form_for @recent_transaction, :html => { :multipart => true } do |f| %>
+  <% if @recent_transaction.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@recent_transaction.errors.count, "error") %> prohibited this recent_transaction from being saved:</h2>
+
+      <ul>
+      <% @recent_transaction.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :image %><br />
+    <%= f.file_field :image %>
+  </div>
+  <div class="field">
+    <%= f.label :amount %><br />
+    <%= f.text_field :amount %>
+  </div>
+  <div class="field">
+    <%= f.label :location %><br />
+    <%= f.text_field :location %>
+  </div>
+  <div class="field">
+    <%= f.label :property_type %><br />
+    <%= f.text_field :property_type %>
+  </div>
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

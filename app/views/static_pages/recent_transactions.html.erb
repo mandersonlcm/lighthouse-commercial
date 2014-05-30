@@ -1,0 +1,26 @@
+<div class="large-8 large-centered columns">
+	<h2 class="subheader">A Sample of Our Recent Work</h2>
+	<% @recent_transactions.each do |transaction| %>
+		<div class="row">
+
+			<div class="large-4 columns">
+				<% unless transaction.image.blank? %>
+					<% if File.extname(transaction.image_url.to_s) == '.pdf' %>
+						<%= link_to image_tag("http://placehold.it/250x250&text=View PDF"), transaction.image_url.to_s %>
+					<% else %>
+						<%= image_tag transaction.image_url.to_s, width: '200px', height: '250px' %>
+					<% end %>
+				<% else %>
+					<%= image_tag "http://placehold.it/250x250&text=No Image Available" %>
+				<% end %>	
+			</div>
+
+			<div class="large-6 large-offset-2 columns">
+				<h5><span class="subheader">Property Type:</span> <%= transaction.property_type %></h5>
+				<p><span class="subheader">Loan Amount:</span> <%= transaction.amount %></br>
+				<span class="subheader">Location: </span><%= transaction.location %></p>
+			</div>
+			<div class="emptySpace"></div>
+		</div>
+	<% end %>
+</div>

@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Image:</b>
+  <%= @recent_transaction.image %>
+</p>
+
+<p>
+  <b>Amount:</b>
+  <%= @recent_transaction.amount %>
+</p>
+
+<p>
+  <b>Location:</b>
+  <%= @recent_transaction.location %>
+</p>
+
+<p>
+  <b>Property type:</b>
+  <%= @recent_transaction.property_type %>
+</p>
+
+<p>
+  <b>Name:</b>
+  <%= @recent_transaction.name %>
+</p>
+
+
+<%= link_to 'Edit', edit_recent_transaction_path(@recent_transaction) %> |
+<%= link_to 'Back', recent_transactions_path %>

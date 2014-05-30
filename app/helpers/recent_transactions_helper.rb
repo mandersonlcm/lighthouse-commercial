@@ -1,0 +1,2 @@
+module RecentTransactionsHelper
+end

@@ -1,0 +1,105 @@
+body {
+	padding-top: 20px;
+}
+
+#mainPhoto {
+	margin-top: 20px;
+}
+
+
+.emptySpace {
+	padding-top: 50px;
+	height: 10px;
+	margin-bottom: 10px;
+	clear:both;
+}
+
+.property_type {
+	/* background-color: #066EA5; */
+	h5 {
+		color: #066EA5;
+	}
+}
+
+.vcard {
+	border: none;
+}
+
+textarea {
+	height: auto;
+}
+
+#about {
+	padding: 10px;
+	&:hover {
+		background-color: #066EA5;
+		a {
+			color: white;
+		}
+	}
+}
+
+#team {
+	padding: 10px;
+	&:hover {
+		background-color: #066EA5;
+		a {
+			color: white;
+		}
+	}
+}
+
+
+/*****************************************************
+ * generic styling for ALS elements: outer container
+ ******************************************************/
+
+.als-container {
+	position: relative;
+	width: 100%;
+	margin: 0px auto;
+	z-index: 0;
+}
+
+/****************************************
+ * viewport styling
+ ***************************************/
+
+.als-viewport {
+	position: relative;
+	overflow: hidden;
+	margin: 0px auto;
+	height: 10px;
+}
+
+/***************************************************
+ * wrapper styling
+ **************************************************/
+
+.als-wrapper {
+	position: relative;
+	/* if you are using a list with <ul> <li> */
+	list-style: none;
+}
+
+/*************************************
+ * item: single list element
+ ************************************/
+
+.als-item {
+	position: relative;
+	display: block;
+	text-align: center;
+	cursor: pointer;
+	float: left;
+}
+
+/***********************************************
+ * prev, next: buttons styling
+ **********************************************/
+ 
+.als-prev, .als-next {
+	position: absolute;
+	cursor: pointer;
+	clear: both;
+}

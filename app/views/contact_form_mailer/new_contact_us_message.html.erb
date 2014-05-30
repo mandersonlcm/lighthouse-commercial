@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h2>Someone sent you a message from the Lighthouse Commercial Website</h2>
+    
+		<h4 class="subheader">Their email is: <%= @email.nil? ? "No Email Given" : @email %></h4>
+    
+    <h3 class="subheader">They sent you the following message: </h3>
+		<p>	
+			<%= @content.nil? ? "They didn't write anything" : @content %>
+    </p>
+  </body>
+</html>

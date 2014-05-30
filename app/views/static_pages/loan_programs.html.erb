@@ -1,0 +1,96 @@
+<div class="large-3 columns">
+	<p class="subheader">
+		Please click below to explore the available programs
+	</p>
+	<div class="section-container accordion" data-section="accordion">
+		<section class="active">
+			<p class="title" data-section-title><a href="#">Permanent Debt <%= fa_icon "chevron-down", class: "pull-right" %></a></p>
+			<div class="content" data-section-content>
+	      <ul class="side-nav">
+				  <li id="cmbs_program"><a href="#">CMBS</a></li>
+				  <li id="life_company_program"><a href="#">Life Company</a></li>
+				  <li id="fannie_mae_program"><a href="#">Fannie Mae</a></li>
+				  <li id="hud_program"><a href="#">HUD/FHA</a></li>
+					<li id="conventional_program"><a href="#">Conventional Banks</a></li>
+					<!-- <li id="credit_union_program"><a href="#">Credit Unions</a></li> -->
+				</ul>
+	    </div>
+		</section>
+		<section>
+			<p class="title" data-section-title><a href="#">CTL Financing <%= fa_icon "chevron-right", class: "pull-right" %></a></p>			
+			<div class="content" data-section-content>
+	      <ul class="side-nav">
+					<li id="credit_tenant_lease_program"><a href="#">Credit Tenant Lease</a></li>
+				</ul>
+	    </div>			
+		</section>
+		<section>
+			<p class="title" data-section-title><a href="#">Bridge Financing <%= fa_icon "chevron-right", class: "pull-right" %></a></p>			
+			<div class="content" data-section-content>
+	      <ul class="side-nav">
+					<li id="bridge_program"><a href="#">Bridge</a></li>
+				</ul>
+	    </div>			
+		</section>
+		<section>
+			<p class="title" data-section-title><a href="#">Construction Financing <%= fa_icon "chevron-right", class: "pull-right" %></a></p>			
+			<div class="content" data-section-content>
+	      <ul class="side-nav">
+					<li id="construction_program"><a href="#">Construction</a></li>
+				</ul>
+	    </div>
+		</section>
+		<section>
+			<p class="title" data-section-title><a href="#">Equity <%= fa_icon "chevron-right", class: "pull-right" %></a></p>			
+			<div class="content" data-section-content>
+	      <ul class="side-nav">
+					<li id="equity_program"><a href="#">Equity Program</a></li>
+				</ul>
+	    </div>
+		</section>
+	</div>
+</div>
+<div class="large-9 columns">
+	<!-- <iframe id="loan_program_iframe" src="https://s3.amazonaws.com/lighthouse_commercial_production/loan_programs/cmbs_program.pdf" width="100%" height="700px">
+	    <p>Placeholder text; only shows up if the page DOESN'T render!</p>
+	</iframe> -->
+	<div class="information">
+		<h6>Every property is different. Loans come in many sizes as well.</h6>
+		<p class="subheader">
+			Please, click on the menu to the left in order to see the parameters for the programs that are currently available.
+			<br>
+			<br>
+			We work with a wide variety of financial institutions who can offer a solution to nearly every problem when it 
+			comes to financing commercial real estate. After taking a look at the general parameters for each program, please
+			contact us so that we can offer the best solution for your needs.
+		</p>
+	</div>
+	<div class="information" id="cmbs_program_information" style="display:none;">
+		<%= render "loan_programs/cmbs" %>
+	</div>
+	<div class="information" id="life_company_program_information" style="display:none;">
+		<%= render "loan_programs/life_company" %>
+	</div>
+	<div class="information" id="fannie_mae_program_information" style="display:none;">
+		<%= render "loan_programs/fannie_mae" %>
+	</div>
+	<div class="information" id="hud_program_information" style="display:none;">
+		<%= render "loan_programs/hud" %>
+	</div>
+	<div class="information" id="credit_tenant_lease_program_information" style="display:none;">
+		<%= render "loan_programs/credit_tenant_lease" %>
+	</div>
+	<div class="information" id="bridge_program_information" style="display:none;">
+		<%= render "loan_programs/bridge" %>
+	</div>
+	<div class="information" id="conventional_program_information" style="display:none;">
+		<%= render "loan_programs/conventional" %>
+	</div>
+	<div class="information" id="construction_program_information" style="display:none;">
+		<%= render "loan_programs/construction" %>
+	</div>	
+	<div class="information" id="equity_program_information" style="display:none;">
+		<h4>For More Information About Equity Programs</h4>
+		<h5 class="subheader">Please, Call Us at 614-340-3792</h5>
+	</div>
+</div>

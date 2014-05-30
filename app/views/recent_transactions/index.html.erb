@@ -1,0 +1,33 @@
+<div class="large-8 columns">
+<h1>Listing recent_transactions</h1>
+
+<table>
+  <tr>
+    <th>Image</th>
+    <th>Amount</th>
+    <th>Location</th>
+    <th>Property type</th>
+    <th>Name</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @recent_transactions.each do |recent_transaction| %>
+  <tr>
+    <td><%= truncate recent_transaction.image_url.to_s, length: 50 %></td>
+    <td><%= recent_transaction.amount %></td>
+    <td><%= recent_transaction.location %></td>
+    <td><%= recent_transaction.property_type %></td>
+    <td><%= recent_transaction.name %></td>
+    <td><%= link_to 'Show', recent_transaction %></td>
+    <td><%= link_to 'Edit', edit_recent_transaction_path(recent_transaction) %></td>
+    <td><%= link_to 'Destroy', recent_transaction, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Recent transaction', new_recent_transaction_path %>
+</div>
