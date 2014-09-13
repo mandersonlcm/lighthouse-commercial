@@ -1,8 +1,8 @@
 CarrierWave.configure do |config|
   config.fog_credentials = {
     provider: "AWS",
-    aws_access_key_id: 'AKIAI32PTERUQJYBQUDA',
-    aws_secret_access_key: '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'
+    aws_access_key_id: ENV["AWS_KEY_ID"],
+    aws_secret_access_key: ENV["AWS_SECRET_KEY"]
   }
   if Rails.env.production?
     config.fog_directory = "lighthouse_commercial_production"
